@@ -82,7 +82,7 @@ public class Menu {
         System.out.println("---------------------------------");
         System.out.println("| 1 - Alter coins                |");
         System.out.println("| 2 - Alter Stock                |");
-        System.out.println("| 2 - See coins                  |");
+        System.out.println("| 3 - See coins                  |");
         System.out.println("| 0 - Sair                       |");
         System.out.println("---------------------------------");
 
