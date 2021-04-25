@@ -171,11 +171,11 @@ public class Coins {
     }
 
     public int getCoin100() {
-        return coin50;
+        return coin100;
     }
 
     public int getCoin200() {
-        return coin50;
+        return coin200;
     }
 
     public int getNota5() {
