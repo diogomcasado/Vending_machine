@@ -22,8 +22,8 @@ public class Buy {
             restante = (price - saldo);
 
             //System.out.println("\nPrice: " + String.format("%.2f", price));
-            System.out.println("Remaining: " + String.format("%.2f", restante));
-            System.out.println("Insert coin/bill (press 999 to cancel): ");
+            System.out.println("--Remaining: " + String.format("%.2f", restante));
+            System.out.println("--Insert coin/bill (press 999 to cancel): ");
 
             toRead = Input.lerDouble();
             if (toRead == 0.05) {
@@ -62,9 +62,9 @@ public class Buy {
                 saldo = 1.00;
                 price = 0;
                 bought = 9;
-                System.out.println("Change returned");
+                System.out.println("--Change returned");
             } else {
-                System.out.println("Invalid coin");
+                System.out.println("--Invalid coin");
             }
 
             troco = (saldo - price);
@@ -74,19 +74,19 @@ public class Buy {
         addToCoins(money, c5, c10, c20, c50, c100, c200, n5, n10);
 
         if (bought == 9) {
-            System.out.println("Cancelled");
+            System.out.println("--Cancelled");
             bought = 0;
         } else if (troco != 0) {
-            System.out.println("Change: " + String.format("%.2f", troco));
+            System.out.println("--Change: " + String.format("%.2f", troco));
             if (money.giveChange(troco) == 1) {
                 bought = 1;
             } else {
-                System.out.println("No change available");
+                System.out.println("--No change available");
                 bought = 0;
             }
 
         } else {
-            System.out.println("No change");
+            System.out.println("--No change");
 
             addToCoins(money, c5, c10, c20, c50, c100, c200, n5, n10);
 
