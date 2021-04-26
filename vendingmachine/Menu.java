@@ -19,29 +19,29 @@ public class Menu {
         if (code == coca.getCod()) {
             if (confirm(coca) == 1) {
                 if (Buy.BuyProduct(coca.getPrice(), money) == 1) {
-                    System.out.println("Bought");
+                    System.out.println("--Bought");
                     coca.setQuantity(coca.getQuantity() - 1);
                 } else {
-                    System.out.println("Not bought");
+                    System.out.println("--Not bought");
                 }
             }
 
         } else if (code == pepsi.getCod()) {
             if (confirm(pepsi) == 1) {
                 if (Buy.BuyProduct(pepsi.getPrice(), money) == 1) {
-                    System.out.println("Bought");
+                    System.out.println("--Bought");
                     pepsi.setQuantity(pepsi.getQuantity() - 1);
                 } else {
-                    System.out.println("Not bought");
+                    System.out.println("--Not bought");
                 }
             }
         } else if (code == icetea.getCod()) {
             if (confirm(icetea) == 1) {
                 if (Buy.BuyProduct(icetea.getPrice(), money) == 1) {
-                    System.out.println("Bought");
+                    System.out.println("--Bought");
                     icetea.setQuantity(icetea.getQuantity() - 1);
                 } else {
-                    System.out.println("Not bought");
+                    System.out.println("--Not bought");
                 }
 
             }
@@ -63,7 +63,7 @@ public class Menu {
                     case 0:
                         break;
                     default:
-                        System.out.println("Invalid option");
+                        System.out.println("--Invalid option");
 
                 }
 
@@ -71,7 +71,7 @@ public class Menu {
         } else if (code == 0) {
             return code;
         } else {
-            System.out.println("Invalid option");
+            System.out.println("--Invalid option");
         }
         return code;
 
@@ -99,7 +99,7 @@ public class Menu {
 
         } else {
             a = 2;
-            System.out.println("Product unavailable");
+            System.out.println("--Product unavailable");
         }
         return a;
 
