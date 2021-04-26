@@ -21,7 +21,7 @@ public class Buy {
         do {
             restante = (price - saldo);
 
-            System.out.println("\nPrice: " + String.format("%.2f", price));
+            //System.out.println("\nPrice: " + String.format("%.2f", price));
             System.out.println("Remaining: " + String.format("%.2f", restante));
             System.out.println("Insert coin/bill (press 999 to cancel): ");
 
