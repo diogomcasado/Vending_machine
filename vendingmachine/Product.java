@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * https://github.com/diogomcasado/Vending_machine
+ * 
  */
 package vendingmachine;
 
@@ -35,13 +35,13 @@ public class Product {
     }
     
     public String viewQuant(){
-        return "\nCode: " + cod +
+        return "Code: " + cod +
                 " Name: " + nome +
                 " Quantity: " + quantity;
     }
     
     public String list(){
-        return "\nCode: " + cod + " " + nome + " " + price;
+        return "\n--Code: " + cod + " " + nome + " " + price;
     }
     
 

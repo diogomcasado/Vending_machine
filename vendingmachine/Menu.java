@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * https://github.com/diogomcasado/Vending_machine
+ * 
  */
 package vendingmachine;
 
@@ -60,6 +60,12 @@ public class Menu {
                         System.out.println(money.viewCoins());
                         break;
 
+                    case 4:
+                        System.out.println("--" + coca.viewQuant());
+                        System.out.println("--" + icetea.viewQuant());
+                        System.out.println("--" + pepsi.viewQuant());
+                        System.out.println();
+
                     case 0:
                         break;
                     default:
@@ -83,6 +89,7 @@ public class Menu {
         System.out.println("| 1 - Alter coins                |");
         System.out.println("| 2 - Alter Stock                |");
         System.out.println("| 3 - See coins                  |");
+        System.out.println("| 4 - See stock                  |");
         System.out.println("| 0 - Sair                       |");
         System.out.println("---------------------------------");
 
@@ -94,7 +101,7 @@ public class Menu {
         int a;
 
         if (product.getQuantity() > 0) {
-            System.out.println("Buy " + product.getNome() + "? (1-yes/2-no)");
+            System.out.println("--Buy " + product.getNome() + "? (1-yes/2-no)");
             a = Input.lerInt();
 
         } else {

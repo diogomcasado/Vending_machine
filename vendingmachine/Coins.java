@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * https://github.com/diogomcasado/Vending_machine
+ * 
  */
 package vendingmachine;
 
@@ -46,14 +46,14 @@ public class Coins {
     }
 
     public String viewCoins() {
-        return "Moedas de 5: " + coin5
-                + "\nMoedas de 10: " + coin10
-                + "\nMoedas de 20: " + coin20
-                + "\nMoedas de 50: " + coin50
-                + "\nMoedas de 1e: " + coin100
-                + "\nMoedas de 2e: " + coin200
-                + "\nNotas de 5e: " + nota5
-                + "\nNotas de 10e: " + nota10;
+        return "\n--0.05 coins: " + coin5
+                + "\n--0.10 coins: " + coin10
+                + "\n--0.20 coins: " + coin20
+                + "\n--0.50 coins: " + coin50
+                + "\n--1e coins: " + coin100
+                + "\n--2e coins: " + coin200
+                + "\n--5e bills: " + nota5
+                + "\n--10e bills: " + nota10;
     }
 
     public int giveChange(double trocoInicial) {
@@ -66,42 +66,42 @@ public class Coins {
             if (((troco - 1000) >= 0) && this.getNota10() > 0) {
                 troco = troco - 1000;
                 this.setNota10(this.getNota10() - 1);
-                System.out.println("10e bill");
+                System.out.println("--10e bill");
                 estado = 1;
             } else if (((troco - 500) >= 0) && this.getNota5() > 0) {
                 troco = troco - 500;
                 this.setNota5(this.getNota5() - 1);
-                System.out.println("5e bill");
+                System.out.println("--5e bill");
                 estado = 1;
 
             } else if (((troco - 200) >= 0) && this.getCoin200() > 0) {
                 troco = troco - 200;
                 this.setCoin200(this.getCoin200() - 1);
-                System.out.println("2e coin");
+                System.out.println("--2e coin");
                 estado = 1;
 
             } else if (((troco - 100) >= 0) && this.getCoin100() > 0) {
                 troco = troco - 100;
                 this.setCoin100(this.getCoin100() - 1);
-                System.out.println("1e coin");
+                System.out.println("--1e coin");
                 estado = 1;
 
             } else if (((troco - 50) >= 0) && this.getCoin50() > 0) {
                 troco = troco - 50;
                 this.setCoin50(this.getCoin50() - 1);
-                System.out.println("0.50 coin");
+                System.out.println("--0.50 coin");
                 estado = 1;
 
             } else if (((troco - 20) >= 0) && this.getCoin20() > 0) {
                 troco = troco - 20;
                 this.setCoin20(this.getCoin20() - 1);
-                System.out.println("0.20 coin");
+                System.out.println("--0.20 coin");
                 estado = 1;
 
             } else if (((troco - 10) >= 0) && this.getCoin10() > 0) {
                 troco = troco - 10;
                 this.setCoin10(this.getCoin10() - 1);
-                System.out.println("0.10 coin");
+                System.out.println("--0.10 coin");
                 estado = 1;
 
             } else if (((troco - 5) >= 0) && this.getCoin5() > 0) {
@@ -110,7 +110,7 @@ public class Coins {
 
                     troco = troco - 5;
                     this.setCoin5(this.getCoin5() - 1);
-                    System.out.println("0.05 coin");
+                    System.out.println("--0.05 coin");
                     estado = 1;
                 } else {
                     estado = 0;
